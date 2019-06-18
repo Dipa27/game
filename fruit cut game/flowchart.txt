@@ -1,0 +1,16 @@
+https://github.com/WillMcIntosh/TheCompleteWebDevelopment/tree/master/Websites
+https://github.com/WillMcIntosh?tab=repositories
+
+//click on start or reset button
+    //check whether we are playing or not
+        if playing
+             then reload the page
+            else
+                {
+                    1. set playing to true.
+                    2. set score to 0.
+                    3. show trail left box.
+                    4.generate random friuts.
+                }
+
+ 

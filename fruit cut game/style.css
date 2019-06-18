@@ -1,0 +1,134 @@
+/*
+     * visibility: hidden vs display: none :
+     * if you apply visibility: hidden, the element is still present in the page
+     * if you use display: none, the element is hidden and won't interact with other elements
+     */
+
+
+
+html{
+    height: 100%;
+    background: -webkit-radial-gradient(circle,white,gray);
+}
+
+#container{
+    width: 750px;
+    height: 600px;
+    background: -webkit-linear-gradient( #43e97b 0%, #38f9d7 100%);
+    margin: 6px auto;
+    padding: 20px;
+    border: 1px solid #38f9d7;
+    /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color] */
+    box-shadow: 0 4px 4px 0 #009dc4;
+    border-radius: 20px;
+
+    /*
+     * in order to position the boxes inside relative to the container, it needs a relative position
+     * if not, the positioning of the other elements would be relative to the body element because
+     * it is the first parent with a relaive position
+     */
+    position: relative;
+}
+
+#score{
+    position: absolute;
+    background: #F1FF92;
+    width: 80px;
+    padding: 15px;
+    text-align: center;
+    left: 650px;
+    color: #888E5F;
+    font-size: 18px;
+    box-shadow: 0 5px 5px #9da853;
+
+}
+
+#trails_left{
+    width: 100px;
+    padding: 10px;
+    background: #F1FF92;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 0 5px 5px #9da853;
+    display: none;
+}
+.life{
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+#main{
+    width: 650px;
+    height: 400px;
+    background: white;
+    font-size: 100px;
+    text-align: center;
+    color: black;
+    margin: 70px auto 10px auto;
+    box-shadow: 0 4px #535aa8;
+    font-size: 80px;
+    /* text will appear at top, use line-height to adjust if needed */
+    line-height: 150px;
+    text-align: center;
+    font-family: cursive , sans-serif;
+    color: black;
+    /* position is relative so fruit can be set above */
+    position: relative;
+    overflow: hidden; /* any element outside boundary won't be shown*/
+}
+.fruit{
+   display: none; 
+   /* absolute so we can set top and left properties with jquery */
+    position: absolute;
+}
+#instruction{
+    width: 450px;
+    height: 70px;
+    background: #b481d9;
+    text-align: center;
+    margin: 10px auto;
+    line-height: 65px;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px #535aa8;
+}
+
+#startreset{
+    width: 200px;
+    height: 30px;
+    background:rgba(255,255, 255,0.5);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    padding: 8px;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 4px rgba(0, 0, 0,0.2);
+    transition: all 0.2s ease;
+    -webkit-transition:  all 0.2s ease;
+}
+
+#gameover{
+    height: 200px;
+    width: 500px;
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 170px;
+    background: -webkit-linear-gradient(#ADD100,#7B920A);
+    left: 145px;
+    z-index: 2;
+    display: none;
+
+}
+
+
+
+   
+    
+    
+    
